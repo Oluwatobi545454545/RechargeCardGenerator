@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(221, 221, 221);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Raleway', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 10px;
+    }
+
+    .second {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .third {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        gap: 5px;
+    }
+
+    .select {
+        padding: 5px;
+        height: 5vh;
+        border: none;
+        background-color: white;
+    }
+
+    .inputpin {
+        padding: 5px;
+        height: 5vh;
+        border: none;
+    }
+
+    .recharge {
+        height: 5vh;
+        padding: 5px;
+        border: none;
+        background-color: blue;
+        cursor: pointer;
+        color: white;
+    }
+
+    .amount {
+        padding: 5px;
+        height: 5vh;
+        border: none;
+        background-color: white;
+    }
+
+    .inputcode {
+        padding: 5px;
+        height: 5vh;
+        border: none;
+    }
+
+    .generate {
+        padding: 5px;
+        height: 5vh;
+        background-color: lime;
+        cursor: pointer;
+        color: white;
+        border: none;
+    }
+
+    .savepin {
+        padding: 5px;
+        height: 5vh;
+        background-color: lime;
+        cursor: pointer;
+        color: white;
+        border: none;
+    }
+
+    table {
+        width: 100%;
+        background-color: white;
+        border-collapse: collapse;
+
+    }
+
+    th {
+        padding: 10px;
+        border: 1px solid rgb(147, 147, 147);
+    }
+    td {
+        padding: 10px;
+        border: 1px solid rgb(147, 147, 147);
+        text-align: center;
+    }
+    .delete{
+        padding: 5px;
+        border: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+    .sn{
+        background-color: rgb(186, 186, 186);
+    }
+</style>
+
+<body>
+    <h2>
+        Recharge Card Generator
+    </h2>
+    <div class="first">
+        <div class="network">
+            Select Network:
+            <select id="select" class="select">
+                <option value="MTN">MTN</option>
+                <option value="AIRTEL">AIRTEL</option>
+                <option value="GLO">GLO</option>
+                <option value="9MOBILE">9MOBILE</option>
+            </select>
+        </div>
+        <div>
+            Enter Pin:
+            <input type="text" id="inputpin" class="inputpin">
+        </div>
+        <div>
+            <button class="recharge" onclick="Recharge()">Recharge</button>
+        </div>
+    </div>
+    <div class="second">
+        Amount:
+        <select id="amount" class="amount">
+            <option value="#50">#50</option>
+            <option value="#100">#100</option>
+            <option value="#200">#200</option>
+            <option value="#500">#500</option>
+            <option value="#1000">#1000</option>
+        </select>
+    </div>
+    <div class="third">
+        Code:
+        <input type="text" id="inputcode" class="inputcode">
+        <button class="generate" onclick="Generate()">Generate</button>
+        <button class="savepin" onclick="savePin()">Save Pin</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: rgb(186, 186, 186);">S/N</th>
+                <th>Network Operator</th>
+                <th>Amount</th>
+                <th>Pin</th>
+                <th>Status</th>
+                <th>Date Created</th>
+                <th>Date Used</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"> </tbody>
+    </table>
+</body>
+<script src="./rechargecharge.js"></script>
+
+</html>
