@@ -1,4 +1,4 @@
-b
+
 const inputCode = document.getElementById('inputcode');
 const inputPin = document.getElementById('inputpin');
 const tbody = document.getElementById('tbody');
